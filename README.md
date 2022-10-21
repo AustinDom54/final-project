@@ -42,3 +42,14 @@ npm i express-handlebars
 <https://tailwindcss.com/>
 
 <https://bulma.io>
+
+## ICONOS
+
+<https://icons.getbootstrap.com/>
+
+## Method override
+```sh
+npm i method-override
+```
+
+<https://www.npmjs.com/package/method-override>
