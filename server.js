@@ -1,6 +1,7 @@
 //const app = require('express')()
 const express = require('express')
 require('dotenv').config()
+const methodOverride = require('method-override')
 
 const { dbConnection } = require('./database/config')
 const routerIndex = require('./routes')
@@ -17,13 +18,14 @@ dbConnection()
 
 // Template Engine
 app.engine('hbs', engine({ extname: '.hbs' }))
+app.set('view engine', 'hbs')
+app.set('views', './views')
 
 // Middlewares
 app.use(express.static('public'))
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
-app.set('view engine', 'hbs')
-app.set('views', './views')
+app.use(methodOverride('_method'))
 
 // Routes
 app.use('/', routerIndex)

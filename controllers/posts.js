@@ -38,7 +38,65 @@ const showPost = async (req, res = response) => {
 	}
 }
 
+// DELETE
+
+const deletePost = async (req, res = response) => {
+	try {
+		await Post.findByIdAndDelete(req.params.id)
+
+		res.redirect('/posts')
+
+	} catch (error) {
+		console.log('Error DELETE', error)
+	}
+}
+
+// NEW
+const newPost = async (req, res = response) => {
+	try {
+		res.status(200).render('new')
+	} catch (error) {
+		console.log('Error CREATE', error)
+	}
+}
+
+// CREATE
+const createPost = async (req, res = response) => {
+
+	try {
+		// console.log(req.body)
+		let post = new Post()
+
+		post.title = req.body.title
+		post.body = req.body.body
+
+		post = await post.save()
+		res.redirect(`/posts/${post.slug}`)
+	} catch (error) {
+		console.log('Error CREATE', error)
+	}
+}
+
+// show post form edit
+const showPostFormEdit = async (req, res = response) => {
+	
+	try {
+		const post = await Post.findById(req.params.id).lean()
+
+		res.render('edit', {
+			title: 'Editando Post',
+			post
+		})
+	} catch (error) {
+		console.log('Show Edit Post', error)
+	}
+}
+
 module.exports = {
 	getPosts,
-	showPost
+	showPost,
+	deletePost,
+	createPost,
+	newPost,
+	showPostFormEdit
 }
