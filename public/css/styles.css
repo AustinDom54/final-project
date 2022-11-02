@@ -1,0 +1,9 @@
+* {
+	font-family: 'Roboto', sans-serif;
+}
+
+textarea {
+	min-height: 96px;
+	max-height: 256px;
+	resize: vertical;
+}
