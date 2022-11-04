@@ -3,6 +3,7 @@
 
 	<hr />
 	<a href="/posts/new" class="btn btn-success">Crear Post</a>
+	{{!-- <a href="/posts/new" class="button success">Crear Post</a> --}}
 	<hr />
 
 	<table class="table">
@@ -20,7 +21,9 @@
 					<td width="40%">{{this.body}}</td>
 					<td>
 						<a href="/posts/{{this.slug}}" class="btn btn-secondary">Ver</a>
+						{{!-- <a href="/posts/{{this.slug}}" class="button primary">Ver</a> --}}
 						<a href="/posts/edit/{{this._id}}" class="btn btn-primary">
+						{{!-- <a href="/posts/edit/{{this._id}}" class="button secondary"> --}}
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								width="16"
@@ -42,6 +45,7 @@
 
 						<form action="/posts/{{this._id}}?_method=DELETE" method="POST">
 							<button class="btn btn-danger">
+							{{!-- <button class="button warning"> --}}
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									width="16"

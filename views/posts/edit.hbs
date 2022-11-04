@@ -1,7 +1,8 @@
 <div class="col">
 	<h2 class="m-4">Editar Post</h2>
 
-	<form action="/posts/{{post.id}}?_method=PUT" method="POST">
+	{{!-- <form action="/posts/{{post._id}}?_method=PUT" method="POST"> --}}
+	<form action="/posts/update/{{post._id}}" method="POST">
 
 		<div class="form-group">
 			<label for="title" class="form-label">Título</label>

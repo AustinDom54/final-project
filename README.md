@@ -1,109 +1,21 @@
-## Pasos para arrancar el proyecto
+# Proyecto final Digitalers edición 2022 -
 
-> Tener disponible al carpeta data/ (Drive. Archivo final-project.zip) y el .env
+Este repositorio contiene archivos correspondientes al último trabajo del curso Bootcamp NodeJS, parte del programa Digitalers edición 2022.
 
-Renombrar el .env.example y colocar lo datos personales.
+# Sobre mi 🙋‍♂️
 
-> Luego levantar la base datos en el cmd de windows
+Mi nombre es Agustín Domenicale, tengo 27 años y soy un programador radicado en Bahía Blanca, Provincia de Buenos Aires, Argentina. Actualmente terminando mi carrera de Profesorado en Inglés. En el último año de cursada del profesorado, en 2019, sentí una conexión muy fuerte con el mundo I.T. y desde entonces decidí tornar mi hobby en una profesión.
 
-```sh
-mongod --dbpath=<Ruta propia>
+Al momento de iniciar el curso contaba con experiencia instalando y configurando sistemas UNIX con servidores web y bases de datos. El programa Digitalers me brindó un escenario perfecto para continuar aprendiendo todo acerca de este mundo.
 
-mongod --dbpath="D:\_courses\60531-bootcamp-node.js-developer\clase-41\final-project\data"
-```
+# Sobre el proyecto 💎
 
-> Luego levantar el servidor
+Consiste en un blog, con posts y logueo de usuarios. Las bases las hemos ido trabajando a lo largo de las últimas clases. La consigna es que nuestros proyectos deben diferir de la versión inicial (realizada por el profesor) e implementar (al menos) una funcionalidad extra.
 
-```sh
-npm run dev
-```
+# Sobre mi proyecto 🛠
 
----
+Terminé de implementar la función de editar posts. Hice algunas modificaciones menores e intenté implementar METRO UI 4 utilizando una variable desde el archivo de variables de entorno .env (aún en desarrollo). También organicé la arquitectura del proyecto en el directorio de vistas. Logré familiarizarme con handlebars y el uso de partials.
 
-## DONTENV
-<https://www.npmjs.com/package/dotenv>
+# Contáctame ⚜
 
-```sh
-npm i dontenv
-```
-
-## FAKER-JS
-
-```sh
-npm install @faker-js/faker
-```
-
-<https://fakerjs.dev/guide/>
-
-## SLUGIFY
-
-```sh
-npm i slugify
-```
-
-<https://www.npmjs.com/package/slugify>
-
-## MONGOOSE
-<https://mongoosejs.com/>
-
-```sh
-npm i mongoose
-```
-
-## Handlebars Express
-<https://www.npmjs.com/package/express-handlebars>
-
-```sh
-npm i express-handlebars
-```
-
-### Framework HTML/CSS
-
-<https://getbootstrap.com/docs/5.0/getting-started/introduction/>
-<https://bootswatch.com/>
-<https://tailwindcss.com/>
-<https://materializecss.com/>
-<https://bulma.io/>
-
-## ICONOS
-
-<https://icons.getbootstrap.com/>
-
-
-## Google Fonts
-
-<https://fonts.google.com/>
-
-## Method Override
-
-```sh
-npm i method-override
-```
-
-<https://www.npmjs.com/package/method-override>
-
-## Sweet Alert 2
-
-<https://sweetalert2.github.io/>
-
-
-## Passport
-
-<https://www.passportjs.org/>
-
-## Passport (Estrategias)
-
-<https://www.passportjs.org/packages/passport-local/>
-
-## Express Session
-
-<https://www.npmjs.com/package/express-session>
-
-```sh
-npm i connect-mongo express-session passport passport-local
-```
-
-## Connect Mongo
-Conector para persistir la información de la sesión en MONGO
-
-<https://www.npmjs.com/package/connect-mongo>
+https://www.linkedin.com/in/austindm/

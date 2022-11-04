@@ -46,6 +46,11 @@ app.use((req, res, next) => {
 	res.locals.todo_ok = req.flash("todo_ok")
 	res.locals.todo_error = req.flash("todo_error")
 	res.locals.user = req.user || null
+	// TODO: Pasar una variable a los handlebars para alternar entre Bootstrap y Metro UI 4
+	/* METRO FRAMEWORK
+	if (process.env.METRO_FRAMEWORK === "TRUE")	// Variables de entorno siempre son cadenas
+		res.locals.metro_framework = true
+	*/
 	next()
 })
 
