@@ -15,6 +15,10 @@ const postSchema = new mongoose.Schema(
 			type: String,
 			required: true
 		},
+		date: {
+			type: Date,
+			required: true
+		},
 		slug: {
 			type: String,
 			required: true,

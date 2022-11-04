@@ -7,3 +7,8 @@ textarea {
 	max-height: 256px;
 	resize: vertical;
 }
+
+td:nth-of-type(3) {
+	display: flex;
+	justify-content: space-between;
+}

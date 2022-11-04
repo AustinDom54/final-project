@@ -60,6 +60,8 @@ const profile = (req, res = response) => {
 const logout = async (req, res = response, next) => {
 	await req.logout((err) => {
 		if( err ) return next()
+
+		req.flash("todo_ok", "Desconectado/a con éxito")
 		res.redirect('/auth/signin')
 	})
 }

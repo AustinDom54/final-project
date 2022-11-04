@@ -36,7 +36,10 @@ const getPosts = async (req, res = response) => {
 const showPost = async (req, res = response) => {
 	try {
 		const post = await Post.findOne({ slug: req.params.slug }).lean();
-		if (post === null) res.redirect("/");
+		if (post === null) {
+			res.redirect("/");
+			return
+		}
 
 		res.render("show", {
 			title: `InfoBlog - ${post.title}`,
@@ -74,6 +77,7 @@ const createPost = async (req, res = response) => {
 		post.title = req.body.title
 		post.body = req.body.body
 		post.user = req.user.id
+		post.date = new Date(Date.now())
 
 		post = await post.save()
 		res.redirect(`/posts/${post.slug}`)
